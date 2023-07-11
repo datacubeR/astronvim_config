@@ -7,5 +7,7 @@ return {
       "python",
       "markdown",
     })
+    -- Fix Issue with Python Indentation
+    opts.indent = { enable = true, disable = { "python" } }
   end,
 }

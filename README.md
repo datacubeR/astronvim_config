@@ -9,7 +9,7 @@ Luego de probar varios frameworks:
 * Lazyvim
 * Spacevim
 
-Finalmente me he decidido por utilizar AstroNvim, esto porque considero que es una configuración muy completa, y que además es muy fácil de personalizar, ya que está basada en Lua, y no en Vimscript. Además de tener una pre-configuración, y muy buena documentación (dentro de lo que se puede esperar en Neovim). Algunas de las cosas que más me gustaron:
+Finalmente me he decidido por utilizar `AstroNvim`, esto porque considero que es una configuración muy completa, y que además es muy fácil de personalizar, ya que está basada en Lua, y no en Vimscript. Además de tener una pre-configuración, y muy buena documentación (dentro de lo que se puede esperar en Neovim). Algunas de las cosas que más me gustaron:
 
 * Instalación de paquetes mediante [lazy.nvim.](https://github.com/folke/lazy.nvim)
 * Soporte para LSP (Autocompletado y reconocimiento de errores para ciertos lenguajes)
@@ -21,11 +21,25 @@ Finalmente me he decidido por utilizar AstroNvim, esto porque considero que es u
 
 ## Instalación
 
-Para poder utilizar Astronvim se debe instalar [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) para luego seguir las siguientes [instrucciones](https://astronvim.com/). Una vez instalado esto, basta con ejecutar el siguiente comando para descargar mi configuración:
+Para poder utilizar Astronvim se debe instalar [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) para luego seguir las siguientes [instrucciones](https://astronvim.com/). 
+> Debo decir que en realidad yo instalé Neovim siguiendo el siguiente [video](https://www.youtube.com/watch?v=2wapxsfzLho), el cuál es bastante más completo para las Distros de Ubuntu. Obviamente instalar sólo siguiendo las instrucciones es demasiado escueto. 
+
+Una vez instalado esto, basta con ejecutar el siguiente comando para descargar mi configuración:
 
 ```bash
 git clone git@github.com:datacubeR/astronvim_config.git ~/.config/nvim/lua/user
 ```
+
+## Modificaciones
+
+En esta configuración, modifiqué algunos aspectos de AstroNvim para dejarlo más a mi gusto. Dentro de estas modificaciones están:
+
+* Cambio de Pestañas con `<S-h>` y `<S-L>`.
+* Estética de Statusline de NVChad.
+* Cierre de Pestañas tipo LunarVim con `<leader>x` y `<leader>X` para forzar.
+* Guardado con <C-s> tanto en Modo Normal como Insert. 
+* Sólo algunos Menú de Which Key están activados. 
+TODO: Me faltan asignar algunos atajos de vim-jukit. 
 
 ## Componentes
 
@@ -44,8 +58,9 @@ Python es el principial lenguaje que utilizo para programar y para el desarrollo
 
 Por lo tanto utilizo los siguientes plugins:
 
-* `astrocommunity.pack.python` permite una configuración básica para el desarrollo en Python. Esto permite tener Treesitter para el Hightlight, `pyright` como Language Server, `ruff` para linting, `isort` para ordenar imports, `black` para el formateo en autoguardado. 
-* copilot.lua para tener Github Copilot. 
+* `Pyright` como Language Server, además de `Black` y `Isort` como Formatters integrados. 
+* `Vimjas/vim-python-pep8-indent` como indentador de código. (Además corrijo problema de Treesitter para tener indentación correcta).
+* [copilot.lua](https://github.com/zbirenbaum/copilot.lua) para tener Github Copilot. 
 * [vim-jukit](https://github.com/luk400/vim-jukit) para el desarrollo interactivo tipo Jupyter. Es por lejos el mejor plugin que he encontrado para trabajar con Jupyter. 
 
 ### Latex
