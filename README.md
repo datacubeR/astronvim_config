@@ -47,6 +47,7 @@ AstroNvim incluye una gran cantidad de funcionalidades. Lo que menciono acá es 
 
 ### Generales
 
+* `modes.nvim` permite cambiar el color del cursor dependiendo del modo en el que se encuentre, lo cual facilita el entender en qué parte se está trabajando. En especial para cuando tengo que hacer clases. 
 * `targets.vim` permite aplicar comandos de vim de manera más flexible.
 * `vim-surround` permite agregar, cambiar o eliminar paréntesis, corchetes, comillas, etc.
 * `todo-comments.nvim` permite marcar comentarios como TODO, FIXME, etc. muy parecido a better-comments de VSCode, pero agrega también compatibilidad con Telescope. 
@@ -58,7 +59,7 @@ Python es el principial lenguaje que utilizo para programar y para el desarrollo
 
 Por lo tanto utilizo los siguientes plugins:
 
-* `Pyright` como Language Server, además de `Black` y `Isort` como Formatters integrados. 
+* `pyright` como language server, además de `black` y `isort` como formatters integrados. 
 * `Vimjas/vim-python-pep8-indent` como indentador de código. (Además corrijo problema de Treesitter para tener indentación correcta).
 * [copilot.lua](https://github.com/zbirenbaum/copilot.lua) para tener Github Copilot. 
 * [vim-jukit](https://github.com/luk400/vim-jukit) para el desarrollo interactivo tipo Jupyter. Es por lejos el mejor plugin que he encontrado para trabajar con Jupyter. 
@@ -78,7 +79,7 @@ Primero, se debe instalar TexLive que es el repositorio de Librerías de Latex, 
 
 ### Markdown
 
-Por mi blog suelo utilizar mucho Markdown, por lo tanto requiero de ciertas funcionalidades:
+Por mi blog suelo utilizar mucho Markdown, por lo tanto requiero de ciertas funcionalidades: 
 
 * `markdown-preview.nvim` permite previsualizar Markdown en el navegador.
 * `markdowny.nvim` permite algunos shortcuts especialmente para Negritas, Cursivas y Código.

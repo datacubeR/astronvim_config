@@ -63,9 +63,11 @@ return {
     ["mt"] = { function() vim.cmd.tabnext() end, desc = "Next tab" },
     ["mT"] = { function() vim.cmd.tabprevious() end, desc = "Previous tab" },
     ["<leader>tc"] = { "<cmd>tabclose<CR>", desc = "Close tab" },
+    -- Docstring Mappings
+    ["<leader>G"] = { "<cmd>Neogen<CR>", desc = "Docstring" },
     -- Jukit Mappings
     ["<leader><space>"] = { "<cmd>call jukit#send#section(1)<CR>", desc = "Run Cell" },
-    ["<CR>"] = { "<cmd>call jukit#send#line()<CR>", desc = "Run Line" }
+    ["<CR>"] = { "<cmd>call jukit#send#line()<CR>", desc = "Run Line" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- ["<leader>a"] = { "<cmd>echo 'Hello World'<cr>", desc = "Say Hello World" },
@@ -77,5 +79,5 @@ return {
   i = {
     -- Save in Insert Mode
     ["<C-s>"] = { "<Esc>:w<cr>a", desc = "Save the File" },
-  }
+  },
 }

@@ -20,10 +20,16 @@ return {
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     resession_enabled = false,       -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
     jukit_mappings_ext_enabled = { 'py', 'ipynb' },
+    jukit_terminal = 'kitty',
+    jukit_output_new_os_window = 0,
+    jukit_outhist_new_os_window = 0,
+    inline_plotting = 1,
     python3_host_prog = '/home/datacuber/miniconda3/bin/python3',
     vimtex_view_method = 'zathura',
     mkdp_auto_start = 0,
-    mkdp_theme = 'dark'
+    mkdp_theme = 'dark',
+    doge_enable_mappings = 1,
+    doge_doc_standard_python = 'numpy',
 
   },
 }

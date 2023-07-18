@@ -9,6 +9,53 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- Installing Modes
+  {
+    "karb94/neoscroll.nvim",
+    event = "WinScrolled",
+    config = function()
+      require('neoscroll').setup({
+        -- All these keys will be mapped to their corresponding default scrolling animation
+        mappings = { '<C-u>', '<C-d>', '<C-b>', '<C-f>',
+          '<C-y>', '<C-e>', 'zt', 'zz', 'zb' },
+        hide_cursor = true,          -- Hide cursor while scrolling
+        stop_eof = true,             -- Stop at <EOF> when scrolling downwards
+        use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
+        respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+        cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
+        easing_function = nil,       -- Default easing function
+        pre_hook = nil,              -- Function to run before the scrolling animation starts
+        post_hook = nil,             -- Function to run after the scrolling animation ends
+      })
+    end
+  },
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require('neogen').setup {
+        enabled = true,
+        languages = {
+          python = {
+            template = {
+              annotation_convention =
+              "numpydoc",
+            }
+          },
+        }
+      }
+    end,
+    ft = "python",
+    -- Uncomment next line if you want to follow only stable versions
+    -- version = "*"
+  },
+  {
+    'mvllow/modes.nvim',
+    config = function()
+      require('modes').setup()
+    end,
+    event = "User AstroFile",
+  },
   -- Cleaning which-key Menu
   {
     "folke/which-key.nvim",
@@ -112,7 +159,7 @@ return {
   -- Python Notebooks in Scripts
   {
     'luk400/vim-jukit',
-    ft = { "python", "ipynb" },
+    event = "User AstroFile",
   },
   -- Virtual Environment Selector for LSP
   {
@@ -130,7 +177,7 @@ return {
         suggestion = {
           auto_trigger = true,
           keymap = {
-            accept = "<C-l>",
+            accept = "<Right>",
             dismiss = "<C-BS>",
             next = "<C-n>",
             prev = "<C-h>",

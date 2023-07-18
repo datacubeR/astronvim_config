@@ -133,6 +133,21 @@ return {
     --   pattern = {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
-    -- }
+    local opts = { noremap = true, silent = true }
+    local map = vim.api.nvim_set_keymap
+    map("o", "b", "vb", opts)
+    vim.cmd([[
+ let g:jukit_layout = {
+    \'split': 'horizontal',
+    \'p1': 0.6,
+    \'val': [
+        \'file_content',
+        \{
+            \'split': 'vertical',
+            \'p1': 0.5,
+            \'val': ['output', 'output_history']
+        \}
+    \]
+\}]]) -- }
   end,
 }
